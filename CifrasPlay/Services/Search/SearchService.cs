@@ -19,12 +19,12 @@ namespace CifrasPlay.Services.Search
         {
             _httpClient = httpClient;
         }
-        public async Task<SearchData> GetSearchResponse(string query, string[] type, int limit, string countryCode, int offset, string accessToken)
+        public async Task<SearchData> GetSearchResponse(SearchDataRequest request)
         {
 
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", request.AccessToken);
 
-            var response = await _httpClient.GetAsync($"search?q={query}&type={type}market={countryCode}&limit={limit}&offset={offset}");
+            var response = await _httpClient.GetAsync($"search?q={request.QueryString}&type={request.Type}market={request.CountryCode}&limit={request.Limit}&offset={request.Offset}");
 
             response.EnsureSuccessStatusCode();
 

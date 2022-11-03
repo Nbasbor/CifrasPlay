@@ -19,6 +19,12 @@ namespace CifrasPlay.Services.Search.Entities
         public string QueryString { get; set; }
 
 
+        /// <summary>Gets or sets the country code.</summary>
+        /// <value>The country code.</value>
+        [JsonProperty("coutryCode")]
+        public string CountryCode { get; set; }
+
+
         /// <summary>Gets or sets the offset.</summary>
         /// <value>The offset.</value>
         [JsonProperty("offset")]
@@ -28,7 +34,7 @@ namespace CifrasPlay.Services.Search.Entities
         /// <summary>Gets or sets the acess token.</summary>
         /// <value>The acess token.</value>
         [JsonProperty("accessToken")]
-        public string AcessToken { get; set; }
+        public string AccessToken { get; set; }
 
 
         /// <summary>Gets or sets the type.</summary>
