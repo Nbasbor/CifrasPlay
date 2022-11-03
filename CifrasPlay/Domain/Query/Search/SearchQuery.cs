@@ -29,7 +29,7 @@ namespace CifrasPlay.Domain.Query.Search
         /// <summary>Gets or sets the acess token.</summary>
         /// <value>The acess token.</value>
         [JsonProperty("accessToken")]
-        public string AcessToken { get; set; }
+        public string AccessToken { get; set; }
 
 
         /// <summary>Gets or sets the type.</summary>

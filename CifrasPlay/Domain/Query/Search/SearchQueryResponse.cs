@@ -57,10 +57,6 @@ namespace CifrasPlay.Domain.Query.Search
         /// <value>The album.</value>
         public AlbumResponse Album { get; set; }
 
-        /// <summary>Gets or sets the artists.</summary>
-        /// <value>The artists.</value>
-        public List<ArtistResponse> Artists { get; set; }
-
         /// <summary>Gets or sets the characteristcs.</summary>
         /// <value>The characteristcs.</value>
         public Characteristics Characteristcs { get; set; }
